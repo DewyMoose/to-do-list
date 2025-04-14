@@ -4,6 +4,57 @@
   box-sizing: border-box;
 }
 
-h1 {
-  color: blue;
+:root {
+  /* Dark background for the whole app */
+  --background-color: rgb(20, 22, 26); /* Very dark gray-blue */
+
+  /* Nav bar slightly lighter to stand out from background */
+  --navbar-color: rgb(30, 33, 38); /* Dark slate */
+
+  /* Primary color (still works in dark mode, good for buttons) */
+  --primary-color: rgb(70, 130, 180); /* Steel Blue */
+
+  /* Accent color (brightens key actions) */
+  --accent-color: rgb(255, 165, 0); /* Orange */
+
+  /* Text color (light so it’s readable on dark) */
+  --text-color: rgb(230, 230, 235); /* Soft white-gray */
+
+  /* Muted text (less attention) */
+  --muted-color: rgb(140, 140, 150); /* Mid gray */
+}
+
+nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-buttons {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--navbar-color);
+  color: var(--text-color);
+  outline: 1px solid black;
+}
+
+.nav-buttons > button {
+  padding: 20px 40px;
+  border-radius: 70px;
+  border-style: none;
+  background-color: var(--primary-color);
+  color: whitesmoke;
+  font-size: 1.3rem;
+}
+
+.content {
+  height: 1000px;
+  width: 100%;
+  background-color: var(--background-color);
 }
