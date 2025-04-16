@@ -1,6 +1,6 @@
 import style from "./style.css";
 
-import { showAllTask } from "./task_logic";
+import { showAllTask, addTask } from "./task_logic";
 
 import { listClearContents } from "./to_do_list";
 import { createClearContents } from "./create_todo_list";
@@ -23,5 +23,6 @@ homeButton.addEventListener("click", () => {
 });
 
 showAllTask();
+addTask();
 
 export { content, contentContainer };

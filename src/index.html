@@ -24,6 +24,31 @@
     <div class="content">
       <div class="content-container">
         <h1>Welcome! What would you like to do today?</h1>
+        <div class="new-task-input-div">
+          <label for="name-input">Task Name: </label>
+          <input
+            name="name-input"
+            class="name-input"
+            type="text"
+            placeholder="Name"
+          />
+          <label for="date-input">Date: </label>
+          <input name="date-input" class="date-input" type="date" />
+          <label for="priority">Priority: </label>
+          <select name="priority" id="priority" class="priority-input">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <label for="note-input">Notes: </label>
+          <input
+            name="note-input"
+            class="note-input"
+            type="text"
+            placeholder="Notes"
+          />
+          <button class="homepage-add-task-button">Add Task</button>
+        </div>
       </div>
     </div>
   </body>

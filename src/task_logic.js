@@ -9,14 +9,14 @@ let allTask = [
   },
 ];
 
-function createProject(title, description) {
+function createProjectFunction(title, description) {
   return {
     title: title,
     description: description,
   };
 }
 
-function createTask(title, dueDate, priority, notes) {
+function createTaskFunction(title, dueDate, priority, notes) {
   return {
     title: title,
     dueDate: dueDate,
@@ -53,4 +53,33 @@ function showAllTask() {
   }
 }
 
-export { createProject, createTask, allProjects, showAllTask };
+function addTask() {
+  const homePageAddTaskButton = document.querySelector(
+    ".homepage-add-task-button"
+  );
+  let taskNameInput = document.querySelector(".name-input");
+  let taskDateInput = document.querySelector(".task-input");
+  let taskPriorityInput = document.querySelector(".priority-input");
+  let taskNotesInput = document.querySelector(".note-input");
+  homePageAddTaskButton.addEventListener("click", () => {
+    let newTask = createTaskFunction(
+      taskNameInput,
+      taskDateInput,
+      taskPriorityInput,
+      taskNotesInput
+    );
+    taskNameInput.value = "";
+    taskNotesInput.value = "";
+    allTask.push(newTask);
+    showAllTask();
+    console.log("this worked ");
+  });
+}
+
+export {
+  createProjectFunction,
+  createTaskFunction,
+  allProjects,
+  showAllTask,
+  addTask,
+};
